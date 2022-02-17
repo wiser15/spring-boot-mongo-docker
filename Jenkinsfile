@@ -1,8 +1,8 @@
 node{
-environment {
-    registry = "wiser15/spring-boot-mongo-docker"
-    registryCredential = ‘dockerhub’
-  }
+// environment {
+ //   registry = "wiser15/spring-boot-mongo-docker"
+  //  registryCredential = ‘dockerhub’
+ // }
 stage ('Git Clone'){
 git branch : 'main', url: 'https://github.com/wiser15/spring-boot-mongo-docker.git'
 }
@@ -21,7 +21,7 @@ stage ('Push Docker Image'){
 // withCredentials([string(credentialsId: 'DOCKER_HUB_PASS', variable: 'DOCKER_HUB_PASS' )]) {
 // sh "docker login -u wiser15 -p $"{DOCKER_HUB_PASS}"
 // }
-// $ docker login -u "wiser15" -p "password" docker.io
+// $ docker login -u "wiser15" -p "c@ncer7861" docker.io
   sh 'docker push wiser15/spring-boot-mongo-docker'
 }
 
