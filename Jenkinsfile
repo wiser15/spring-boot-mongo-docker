@@ -5,7 +5,7 @@ git branch : 'main', url: 'https://github.com/wiser15/spring-boot-mongo-docker.g
 }
 
 stage('Maven Build jar'){
-def mavenHome = tool name: MAVEN-3.6.1", type: "maven"
+def mavenHome = tool name: "MAVEN-3.6.1", type: "maven"
 def mavenCMD = "$mavenHome}/bin/mvn"
 sh "{mavenCMD} clean package"
 }
