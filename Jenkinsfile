@@ -22,7 +22,7 @@ stage ('Push Docker Image'){
 // sh "docker login -u wiser15 -p $"{DOCKER_HUB_PASS}"
 // }
 // $ docker login -u "wiser15" -p "c@ncer7861" docker.io
-  sh 'docker push wiser15/spring-boot-mongo-docker'
+  sh 'docker push wiser15/spring-boot-mongo-docker:1.0'
 }
 
 }
