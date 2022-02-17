@@ -18,7 +18,7 @@ stage ('Push Docker Image'){
 // withCredentials([string(credentialsId: 'DOCKER_HUB_PASS', variable: 'DOCKER_HUB_PASS' )]) {
 // sh "docker login -u wiser15 -p $"{DOCKER_HUB_PASS}"
 // }
-sh 'docker push wiser15/spring-boot-mongo-docker/'
+sh 'docker push wiser15/spring-boot-mongo-docker'
 }
 
 }
