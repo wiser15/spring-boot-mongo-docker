@@ -11,7 +11,7 @@ sh "${mavenCMD} clean package"
 }
 
 stage ('Build Docker Image'){
-sh "docker build  wiser15/spring-boot-mongo-docker/ ."
+sh "docker build -t wiser15/spring-boot-mongo-docker/ ."
 }
 
 stage ('Push Docker Image'){
